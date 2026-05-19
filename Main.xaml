@@ -1,0 +1,779 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="684,9387.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:DateTime" Name="startDate" />
+      <Variable x:TypeArguments="s:DateTime" Name="endDate" />
+      <Variable x:TypeArguments="s:DateTime" Name="currentDate" />
+      <Variable x:TypeArguments="x:Int32" Name="tradeCount">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Double" Name="totalTWSEVolume" />
+      <Variable x:TypeArguments="x:Double" Name="totalTPEXVolume" />
+      <Variable x:TypeArguments="x:Double" Name="totalBuyAmount" />
+      <Variable x:TypeArguments="x:String" Name="totalSellAmount" />
+      <Variable x:TypeArguments="x:String" Name="twseUrl" />
+      <Variable x:TypeArguments="x:Double" Name="totalVolume" />
+      <Variable x:TypeArguments="x:Double" Name="avgVolume" />
+      <Variable x:TypeArguments="x:Double" Name="totalBuy" />
+      <Variable x:TypeArguments="x:Double" Name="totalSell" />
+      <Variable x:TypeArguments="x:String" Name="tpexBuyText" />
+      <Variable x:TypeArguments="x:String" Name="tpexSellText" />
+      <Variable x:TypeArguments="x:Double" Name="tpexBuy" />
+      <Variable x:TypeArguments="x:Double" Name="tpexSell" />
+      <Variable x:TypeArguments="njl:JObject" Name="twseJson" />
+      <Variable x:TypeArguments="x:String" Name="twseResponse" />
+      <Variable x:TypeArguments="x:Double" Name="twseVolume" />
+      <Variable x:TypeArguments="x:String" Name="twseUrl2" />
+      <Variable x:TypeArguments="x:String" Name="twseResponse2" />
+      <Variable x:TypeArguments="njl:JObject" Name="twseJson2" />
+      <Variable x:TypeArguments="x:Double" Name="twseBuy" />
+      <Variable x:TypeArguments="x:Double" Name="twseSell" />
+      <Variable x:TypeArguments="x:String" Name="rocDate" />
+      <Variable x:TypeArguments="x:Double" Name="buyRatio" />
+      <Variable x:TypeArguments="x:Double" Name="sellRatio" />
+      <Variable x:TypeArguments="x:String" Name="templatePath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="684,116" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[startDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[New DateTime(2025,12,1)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="684,116" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[endDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[New DateTime(2025,12,31)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="684,116" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[currentDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[startDate]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="684,116" sap2010:WorkflowViewState.IdRef="Assign_29">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[templatePath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">C:\Users\J1140111\Documents\UiPath\RPA\DailyReport.xlsx</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ueab:ExcelApplicationCard DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="684,8870" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="[templatePath]">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="682,8651.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[currentDate &lt;= endDate]" DisplayName="While" sap:VirtualizedContainerService.HintSize="648,8591.333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="646,8470" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[currentDate.DayOfWeek &lt;&gt; DayOfWeek.Saturday AndAlso currentDate.DayOfWeek &lt;&gt; DayOfWeek.Sunday]" sap:VirtualizedContainerService.HintSize="612,8410" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="610,8191.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap:VirtualizedContainerService.HintSize="576,8131.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_43">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[twseUrl]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=" + currentDate.ToString("yyyyMMdd") + "&amp;response=json"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12&#xD;&#xA;System.Net.ServicePointManager.ServerCertificateValidationCallback = Function(s,ce,ch,ssl)True" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="542,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_13">
+                            <ui:InvokeCode.Arguments>
+                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                          <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request (legacy)" EnableSSLVerification="True" EndPoint="[twseUrl]" sap:VirtualizedContainerService.HintSize="542,102.66666666666667" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="GET" Result="[twseResponse]" TimeoutMS="6000">
+                            <ui:HttpClient.Attachments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Attachments>
+                            <ui:HttpClient.Cookies>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Cookies>
+                            <ui:HttpClient.Headers>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Headers>
+                            <ui:HttpClient.Parameters>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Parameters>
+                            <ui:HttpClient.UrlSegments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.UrlSegments>
+                          </ui:HttpClient>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="542,117.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[twseResponse]" />
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xD;&#xA;&#x9;System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12&#xD;&#xA;&#x9;System.Net.ServicePointManager.ServerCertificateValidationCallback = Function(s,ce,ch,ssl) True&#xD;&#xA;&#x9;Dim client As New System.Net.WebClient()&#xD;&#xA;&#x9;client.Headers.Add(&quot;User-Agent&quot;,&quot;Mozilla/5.0&quot;)&#xD;&#xA;&#x9;twseResponse = client.DownloadString(twseUrl)&#xD;&#xA;Catch ex As Exception&#x9;&#xD;&#xA;&#x9;twseResponse = &quot;ERROR:&quot; + ex.ToString()&#xD;&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="542,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_12">
+                            <ui:InvokeCode.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="twseUrl" />
+                              <OutArgument x:TypeArguments="x:String" x:Key="twseResponse" />
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="twseJson = Newtonsoft.Json.Linq.JObject.Parse(twseResponse)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="542,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_8">
+                            <ui:InvokeCode.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="twseResponse" />
+                              <OutArgument x:TypeArguments="njl:JObject" x:Key="twseJson" />
+                            </ui:InvokeCode.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeCode>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_44">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[twseVolume]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">[Double.Parse(twseJson("data")(0)(2).ToString().Replace(",",""))]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_45">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[twseVolume]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">[Math.Round(twseVolume / 100000000,4)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_46">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[twseUrl2]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["https://www.twse.com.tw/rwd/zh/dayTrading/TWTB4U?date=" + currentDate.ToString("yyyyMMdd") +"&amp;response=JSON"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xD;&#xA;&#x9;System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12&#xD;&#xA;&#x9;System.Net.ServicePointManager.ServerCertificateValidationCallback = Function(s,ce,ch,ssl)True&#xD;&#xA;&#x9;Dim client As New System.Net.WebClient()&#xD;&#xA;&#x9;client.Headers.Add(&quot;User-Agent&quot;,&quot;Mozilla/5.0&quot;)&#xD;&#xA;&#x9;twseResponse2 = client.DownloadString(twseUrl2)&#xD;&#xA;Catch ex As Exception&#xD;&#xA;&#x9;twseResponse2 = &quot;ERROR:&quot; +ex.ToString()&#xD;&#xA;End Try " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="542,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_9">
+                            <ui:InvokeCode.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="twseUrl2" />
+                              <OutArgument x:TypeArguments="x:String" x:Key="twseResponse2" />
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="twseJson2 = Newtonsoft.Json.Linq.JObject.Parse(twseResponse2)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="542,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_10">
+                            <ui:InvokeCode.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="twseResponse2" />
+                              <OutArgument x:TypeArguments="njl:JObject" x:Key="twseJson2" />
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_47">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[twseBuy]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">[Double.Parse(twseJson2("data")(0)(2).ToString().Replace(",",""))]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_48">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[twseBuy]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">[Math.Round(twseBuy / 100000000,4)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_49">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[twseSell]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">[Double.Parse(twseJson2("data")(0)(4).ToString().Replace(",",""))]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="542,116" sap2010:WorkflowViewState.IdRef="Assign_51">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Double">[twseSell]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Double">[Math.Round(twseSell / 100000000,4)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 日成交量值、指數 - 證券櫃檯買賣中心" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="542,5914" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" ScopeGuid="db84af78-82f7-4d09-b3f8-d6769a671b94" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,5724.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="variable1" />
+                                    <Variable x:TypeArguments="x:Double" Name="tpexVolume" />
+                                    <Variable x:TypeArguments="x:String" Name="variable2" />
+                                    <Variable x:TypeArguments="x:String" Name="tpexVolumeText" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NSelectItem DisplayName="Select Item ''資料年月：''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="506,241.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_11" Item="114年" ScopeIdentifier="db84af78-82f7-4d09-b3f8-d6769a671b94" Version="V5">
+                                    <uix:NSelectItem.Items>
+                                      <scg:List x:TypeArguments="x:String" Capacity="28">
+                                        <x:String>115年</x:String>
+                                        <x:String>114年</x:String>
+                                        <x:String>113年</x:String>
+                                        <x:String>112年</x:String>
+                                        <x:String>111年</x:String>
+                                        <x:String>110年</x:String>
+                                        <x:String>109年</x:String>
+                                        <x:String>108年</x:String>
+                                        <x:String>107年</x:String>
+                                        <x:String>106年</x:String>
+                                        <x:String>105年</x:String>
+                                        <x:String>104年</x:String>
+                                        <x:String>103年</x:String>
+                                        <x:String>102年</x:String>
+                                        <x:String>101年</x:String>
+                                        <x:String>100年</x:String>
+                                        <x:String>99年</x:String>
+                                        <x:String>98年</x:String>
+                                        <x:String>97年</x:String>
+                                        <x:String>96年</x:String>
+                                        <x:String>95年</x:String>
+                                        <x:String>94年</x:String>
+                                        <x:String>93年</x:String>
+                                        <x:String>92年</x:String>
+                                        <x:String>91年</x:String>
+                                        <x:String>90年</x:String>
+                                        <x:String>89年</x:String>
+                                        <x:String>88年</x:String>
+                                      </scg:List>
+                                    </uix:NSelectItem.Items>
+                                    <uix:NSelectItem.Target>
+                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/info/daily-indices.html" DesignTimeRectangle="859, 513, 128, 53" DesignTimeScaleFactor="1.3499999046325684" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='___auto1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='___auto1' tag='SELECT' type='' class='select-year selectobj' aaname='資料年月：' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="7f0ca29c-3978-42ab-a6db-f4f19fd8d813" InformativeScreenshot="ee9d7cbe12bf8f5ffe43b45ff8d9412c.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='日成交量值、指數 - 證券櫃檯買賣中心' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="730, 520, 114, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='資料年月：' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='資料年月：' /&gt;" Guid="c6bccc1a-972a-4761-8090-cd60badbeffd" SearchSteps="FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                        <uix:TargetAnchorable.PointOffset>
+                                          <uix:PointOffset />
+                                        </uix:TargetAnchorable.PointOffset>
+                                      </uix:TargetAnchorable>
+                                    </uix:NSelectItem.Target>
+                                  </uix:NSelectItem>
+                                  <uix:NSelectItem DisplayName="Select Item ''資料年月：''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="506,241.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_12" Item="12月" ScopeIdentifier="db84af78-82f7-4d09-b3f8-d6769a671b94" Version="V5">
+                                    <uix:NSelectItem.Items>
+                                      <scg:List x:TypeArguments="x:String" Capacity="12">
+                                        <x:String>1月</x:String>
+                                        <x:String>2月</x:String>
+                                        <x:String>3月</x:String>
+                                        <x:String>4月</x:String>
+                                        <x:String>5月</x:String>
+                                        <x:String>6月</x:String>
+                                        <x:String>7月</x:String>
+                                        <x:String>8月</x:String>
+                                        <x:String>9月</x:String>
+                                        <x:String>10月</x:String>
+                                        <x:String>11月</x:String>
+                                        <x:String>12月</x:String>
+                                      </scg:List>
+                                    </uix:NSelectItem.Items>
+                                    <uix:NSelectItem.Target>
+                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/info/daily-indices.html" DesignTimeRectangle="991, 513, 115, 53" DesignTimeScaleFactor="1.3499999046325684" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='SELECT' class='select-month selectobj' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f93732ab-6cb7-40b6-a912-8bd370d069ff" InformativeScreenshot="b6e8e758a099128ffaaa0adfcca595ce.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='日成交量值、指數 - 證券櫃檯買賣中心' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="730, 520, 114, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='資料年月：' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='資料年月：' /&gt;" Guid="b8b4e489-f11b-4059-89be-dd2bf0f73996" SearchSteps="FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                        <uix:TargetAnchorable.PointOffset>
+                                          <uix:PointOffset />
+                                        </uix:TargetAnchorable.PointOffset>
+                                      </uix:TargetAnchorable>
+                                    </uix:NSelectItem.Target>
+                                  </uix:NSelectItem>
+                                  <uix:NGetText DisplayName="Get Text '122,410,385'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="506,190" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="db84af78-82f7-4d09-b3f8-d6769a671b94" TextString="[tpexVolumeText]" Version="V5">
+                                    <uix:NGetText.Target>
+                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/info/daily-indices.html" ContentHash="Oze0giWvtE24Eja8rNAUMw" DesignTimeRectangle="666, 703, 293, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" Guid="61c89c7a-2e31-40c0-8c71-7a368c125ac2" InformativeScreenshot="54b8cfbba28391deb5c91111e5c475ec.jpg" Reference="K5WWoLKL2EascTsF_9gWBw/Qq34FkySYEa4P59rhqjVPA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='日成交量值、指數 - 證券櫃檯買賣中心' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NGetText.Target>
+                                  </uix:NGetText>
+                                  <Assign sap:VirtualizedContainerService.HintSize="506,116" sap2010:WorkflowViewState.IdRef="Assign_52">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Double">[tpexVolume]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Double">[Double.Parse(tpexVolumeText.Replace(",", ""))]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="506,116" sap2010:WorkflowViewState.IdRef="Assign_53">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Double">[tpexVolume]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Double">[Math.Round(tpexVolume/100000000,4)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 現股當沖交易統計資訊 - 證券櫃檯買賣中心" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="506,4760" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="73643017-3b34-4914-9715-0262f69ba9dc" Version="V2">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,4570.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="rocDate" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 現股當沖交易統計資訊 - 證券櫃檯買賣中心(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="470,4510.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" ScopeGuid="cbcbceae-01f5-401c-806b-27c5c23680fb" Version="V2">
+                                            <uix:NApplicationCard.Body>
+                                              <ActivityAction x:TypeArguments="x:Object">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,4321.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NSelectItem DisplayName="Select Item ''114年''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,241.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="114年" ScopeIdentifier="cbcbceae-01f5-401c-806b-27c5c23680fb" Version="V5">
+                                                    <uix:NSelectItem.Items>
+                                                      <scg:List x:TypeArguments="x:String" Capacity="13">
+                                                        <x:String>115年</x:String>
+                                                        <x:String>114年</x:String>
+                                                        <x:String>113年</x:String>
+                                                        <x:String>112年</x:String>
+                                                        <x:String>111年</x:String>
+                                                        <x:String>110年</x:String>
+                                                        <x:String>109年</x:String>
+                                                        <x:String>108年</x:String>
+                                                        <x:String>107年</x:String>
+                                                        <x:String>106年</x:String>
+                                                        <x:String>105年</x:String>
+                                                        <x:String>104年</x:String>
+                                                        <x:String>103年</x:String>
+                                                      </scg:List>
+                                                    </uix:NSelectItem.Items>
+                                                    <uix:NSelectItem.Target>
+                                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" DesignTimeRectangle="854, 686, 77, 24" DesignTimeScaleFactor="1.3499999046325684" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='table-condensed' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='table-condensed' tag='TABLE' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl type='' tag='SELECT' class='yearselect' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="138750dc-0c3a-417c-a3ba-1cdea22fb948" InformativeScreenshot="89d75a450ca6b279474d00113f5bd747.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" SearchSteps="Selector" Version="V6">
+                                                        <uix:TargetAnchorable.PointOffset>
+                                                          <uix:PointOffset />
+                                                        </uix:TargetAnchorable.PointOffset>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NSelectItem.Target>
+                                                  </uix:NSelectItem>
+                                                  <uix:NSelectItem DisplayName="Select Item ''12月''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,241.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_10" Item="12月" ScopeIdentifier="cbcbceae-01f5-401c-806b-27c5c23680fb" Version="V5">
+                                                    <uix:NSelectItem.Items>
+                                                      <scg:List x:TypeArguments="x:String" Capacity="12">
+                                                        <x:String>1月</x:String>
+                                                        <x:String>2月</x:String>
+                                                        <x:String>3月</x:String>
+                                                        <x:String>4月</x:String>
+                                                        <x:String>5月</x:String>
+                                                        <x:String>6月</x:String>
+                                                        <x:String>7月</x:String>
+                                                        <x:String>8月</x:String>
+                                                        <x:String>9月</x:String>
+                                                        <x:String>10月</x:String>
+                                                        <x:String>11月</x:String>
+                                                        <x:String>12月</x:String>
+                                                      </scg:List>
+                                                    </uix:NSelectItem.Items>
+                                                    <uix:NSelectItem.Target>
+                                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" DesignTimeRectangle="934, 686, 67, 24" DesignTimeScaleFactor="1.3499999046325684" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='table-condensed' tag='TABLE' /&gt;&lt;webctrl class='monthselect' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='table-condensed' tag='TABLE' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl class='monthselect' type='' tag='SELECT' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="57df55ae-4595-48a8-80fb-25a9e688b5d6" InformativeScreenshot="fdb4ece70c364839192ed50a26f49a39.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" SearchSteps="Selector" Version="V6">
+                                                        <uix:TargetAnchorable.PointOffset>
+                                                          <uix:PointOffset />
+                                                        </uix:TargetAnchorable.PointOffset>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NSelectItem.Target>
+                                                  </uix:NSelectItem>
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Label''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,355.3333333333333" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cbcbceae-01f5-401c-806b-27c5c23680fb" Version="V5">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" DesignTimeRectangle="708, 810, 57, 53" DesignTimeScaleFactor="1.3499999046325684" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='table-condensed' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='table-condensed' tag='TABLE' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;&lt;webctrl type='' tag='TD' class='active start-date active end-date available' aaname='1' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='1' /&gt;" Guid="02b8ca7f-219b-453a-8d62-cb10ac7aa339" InformativeScreenshot="2f40300bc20439115e836403c2dd8695.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" SearchSteps="Selector" Version="V6">
+                                                        <uix:TargetAnchorable.PointOffset>
+                                                          <uix:PointOffset />
+                                                        </uix:TargetAnchorable.PointOffset>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NClick.Target>
+                                                    <uix:NClick.VerifyOptions>
+                                                      <uix:VerifyExecutionOptions Mode="Appears">
+                                                        <uix:VerifyExecutionOptions.Retry>
+                                                          <InArgument x:TypeArguments="x:Boolean" />
+                                                        </uix:VerifyExecutionOptions.Retry>
+                                                        <uix:VerifyExecutionOptions.Timeout>
+                                                          <InArgument x:TypeArguments="x:Double" />
+                                                        </uix:VerifyExecutionOptions.Timeout>
+                                                      </uix:VerifyExecutionOptions>
+                                                    </uix:NClick.VerifyOptions>
+                                                  </uix:NClick>
+                                                  <uix:NGetText DisplayName="Get Text '104,695,231,180'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="cbcbceae-01f5-401c-806b-27c5c23680fb" TextString="[tpexBuyText]" Version="V5">
+                                                    <uix:NGetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" ContentHash="j7Cr5ODKqEK-nooMEzrA9w" DesignTimeRectangle="896, 886, 228, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" Guid="b13ed0ab-d309-47d8-8e10-d6ff7b2f0c1f" InformativeScreenshot="aae24722dc6ae56afec803286492cf0c.jpg" Reference="K5WWoLKL2EascTsF_9gWBw/ILy8Vbbpy0-PppWIZlYyDg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                    </uix:NGetText.Target>
+                                                  </uix:NGetText>
+                                                  <uix:NGetText DisplayName="Get Text '105,198,711,700'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="cbcbceae-01f5-401c-806b-27c5c23680fb" TextString="[tpexSellText]" Version="V5">
+                                                    <uix:NGetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" ContentHash="IzaiCMDQ6E60mO8CH7OlZQ" DesignTimeRectangle="1368, 886, 228, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='2' tag='TD' /&gt;" Guid="1a3f3ac1-9623-428c-8e6b-a82bbcababad" InformativeScreenshot="5bacf2c45dd6c50cbdd7f4d95570f260.jpg" Reference="K5WWoLKL2EascTsF_9gWBw/OdOq5vcQMUODk03lZNm2aQ" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                    </uix:NGetText.Target>
+                                                  </uix:NGetText>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_55">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[tpexBuy]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Double.Parse(tpexBuyText.Replace(",",""))]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_56">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[tpexBuy]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Math.Round(tpexBuy/100000000,4)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_57">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[tpexSell]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Double.Parse(tpexSellText.Replace(",",""))]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_58">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[tpexSell]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Math.Round(tpexSell/100000000,4)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_59">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[totalVolume]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[totalTWSEVolume + totalTPEXVolume]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_60">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[tradeCount]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[tradeCount +1]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_61">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[totalTWSEVolume]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[totalTWSEVolume+totalVolume]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_62">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[avgVolume]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Math.Round(totalTWSEVolume/tradeCount,4)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_63">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[totalBuy]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[twseBuy + tpexBuy]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_64">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[totalSell]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[twseSell + tpexSell]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_65">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[buyRatio]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Math.Round(totalBuy/totalVolume*100,2)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="Assign_66">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Double">[sellRatio]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Double">[Math.Round(totalSell/totalVolume*100/2)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;A&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[currentDate.ToString(&quot;yyyy/MM/dd&quot;)]" />
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;B&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[totalVolume]" />
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;C&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_8" Value="[avgVolume]" />
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;D&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[totalBuy]" />
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;E&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_10" Value="[totalSell]" />
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;F&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_11" Value="[buyRatio]" />
+                                                  <ueab:WriteCellX Cell="[Excel.Sheet(&quot;工作表1&quot;).Cell(&quot;G&quot; &amp; (tradeCount + 1).ToString())]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,220.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_12" Value="[sellRatio]" />
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,106.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_68">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="s:DateTime">[currentDate]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="s:DateTime">[currentDate.AddDays(1)]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </uix:NApplicationCard.Body>
+                                            <uix:NApplicationCard.OCREngine>
+                                              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                                <ActivityFunc.Argument>
+                                                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                </ActivityFunc.Argument>
+                                              </ActivityFunc>
+                                            </uix:NApplicationCard.OCREngine>
+                                            <uix:NApplicationCard.TargetApp>
+                                              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="I1wU_3TkpEC9L7WuHakBBg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAwASURBVGhDxZl7cFTVHcd3pqOgKAQEFeQRIIQ8N5vdBAOBsHkIkUcSOu2M01GTmb7sHx1mnOlMq22DM7X1nRgeawMhPATbUsWq02kryQaSGINI9I+q40xZwIQQKNkkqAR295x+f79zzr131wCiaM/Md76/3++cm/v5nXvusgmu6zFCfk/SmRJvzZmy/LqB0rz9Z0rzQ2dL8sIDJXlyoCRfni3NR+wLoR48U5JX11fqq+r3e5L15f+fQdDnSvPXnynOCxpQ5Y642ORKp4t9WjTnE6eLvT0Dfl/1t9oMgZ8tWVR7tsQ3iN0UCtQX5wrQuF2zwXUzfq847SdnNX/jjeBY1AJaHw0NocEYjup+AqQ6QwEQkIj7DSjHXs6VTEzuxfXeWn276zdoZwaK83t4N3kHfXonbTegZlcNkAG38uWmTnGuoPwUK5dzcuSh6/Y0BvyLqgEZtnfSq3bSAnXCGjAFBQegDWl5EYEqaFZRnLiJvqLc8MllniqN8dUGPU4Da8Cs3SQ4dgDCDaCSglCuQQEGKB17BMFyzu7hWMnE8GXQUs9XO1L9Rd7auN21YBwxAShnYIoNCM/pOK62zINGPMoBqJ1j9qV23AvvXZqDJtzX1gTAq81jvuJj164A9Y5ZkNoVjILTdQYzdQATpC0FbfQJeWGO6C/yVGu8Kw96eQA7SGAMjZsSqLWDWtYu2rvJMUPBLcilObyT7IAxnigCZVhHzCo0cg/2F6Rd/cUGbMi5iwRkdtLsmrV7JA0YJ2sXE3OtQrewgCk2kEsodhOskjNfki1OLHH3aMyxB70w1i5CTvB4QAcMNNauMpx2vYMOZ4mTzhoAVe6WJ5fYrpRtRE1s0Ljxw/NSVfIzDxdbu6mhVAMWkDPOsXaRcwD1lhfK4aaAHD36joyc6pPWiIxIMXxExo4/I6M9FTLanQf5SCL6NjlychNjLmbNUd3rVFj2eJI0tj18e9ftKNpRJY+uyjeAFpwC1MB6l5y72v+9cob+skOceR2NrGGgWLdXRLtzAUvSkN3kuXCu65jWqjzS5Yl/Cp7mqmTv3u9KH/Sz361wAiZAK9Gj5seNRxquf1LGRkY0mhqnwkK+8d5FuTU4Khuhto8uyY/7o3pWjyieyomnAeQBnEc5w6o8RrUuqikBGp5j6vFPwbunqiZ3b5XI3VMlvXvWyb9//24NqM6p8yzyWVWxGNq2RdOo8XrPRfnQjk9lfu2QXLRhmD1/gxbiyvrzWHNJr1Yj9kmAwSAZ7coBKBxxjMB1HOlyq7grG/AUuzHvXq/xqYF1PYAXBE+NPPhUOcNaL9Bigs6WJ4wWZ8vB+ic0Au14TP60WYHnaeA8irW4Tq6borV0jRmx408xlAYTka5sDZsNeI6N0GiWrmcFGZ6Oj+fFSuFBA7kvVkkPRL75oaXi5OIscWJxFgPrmPO+dSuFOTYEsrZuJA7Y91tbVs0xT6JrrCbwkkePlgOe4FiAZdnxW+SZWJNp1WQwOcnl2bO20rO7UiaqsKlCfrDcLU4UZInjBdRElmQvyBTn33hV3RjjJ9vPAzTskIL1xtXCdo45k/8Y15ohhg9r6EwRg6JvZTJwtCsDcQYaQExONc6hjowal2dXRV3OrgqpVMlODeTsrhBP/HyZBR26O1OGCjJl77oV+pZSvoYzTyBjSzUxtuy5145e1D8N7/XhAhuOlW55BIp1paMZitOUOhbWu3J2rg26d1ZI964K4WzCvWutoHr3PR7J8FrnnvuDvp2Uq58dlrm/CdsCUFx+OTnW/cjxFGInN2noNBJg00RMOdcinQutuUgn5emvUgMh98618jISP/h9mTi+KEOElOSFdw/zzT7Cx6IHACQCMfGVNThGLWy9C2KoWwESKMMuVNCdqULVUlFDTEIc60wNubJ3rhHuHYCFsllrVIw6xVR7vcrLDRxDA+blbf3gkswBEOvX2jWgcmfNWYfTesis+Zs5RqO9AAYka4HDLYlIh/JoZwqOUErYld1MkIAlv4xKG8plKD9dHMtLE+pOUgZaL0g3IIwMbFxtjNjAO+tbWj7XPxXvQQeDATKFIW3NF9GO+TzPOcVwV9aO1SILkPFaLbO2QyoWmVD9Dwvksbx0qwG6qYFwKvsKeeKcqcU1QKAWrNE8pc75aI5jrJnHsStr+5pwZvMqkUnAEMXsTatUzlolFgXK5fuFGfiS1ss3evXoqMx+dFBmPXqOnUDYnXGCm7VZVHPUW3AceUSGDSA0F8dlLvK5JucaOdfbk7nmyti+KqQgV0vEwgKHG1Gd9Mv1hfLzI918rz68eASkpODGVuLcF9d+eEp9TxJDXQoUcARoFO2YI6hm6pxzbU7IlbFt1X5IZhjYbfcmxPcKFsVYd+SvjXwzGjXbhmUmADIBpfzateKZIf3T8DH6n8cAOAeg8Yq0z4bPBvRsQbGVt88JujKbVtcpOA1LzZgcSt9WLtLZ7yUX99VV6ttJuf/dizLjkXMyAyAsxATFtavIrNv/7qj+aWjgnSWAnAUwApwlYogj7bNk5NAszsktUf3gzHpXWmN5jYKEtpZLEoNvNVI1JZV3n3pf31LK6q0jMh0gRgSV/sh/LVDnXPyac7h2WP8UHJ+BfRpuJivaPhON3AXNBDhyrt2l4natQzMq8WXOn8RwjeUybetKbgJNIS4X7E5RDWtKX6qWIxc/5Rv3DsZk2VNhmQZoAk/7lXI7PmfVaI2plT0dlr36H7CR0U+x+wWAu0uBHpqh4xki6nCqRQ7NUHn7DCGDd6pf8tMaVwYhDUq+EvDwP5qarlOua4+/FeCb06AmHsRuEtwXpBtw6gGspWvMGPr4MQ1NcNMBOx3xdByR6VYebWennOuxg9PtX/AXNq5cvxBgtlYIR5xQh15QtY1HdmsENV45MipLnhyUqYBcCBk3eqBxSL7iOPM0Xn6/SQ4G6dgosMjBOy1FD90JaDu36kr234mS6/xJAAunAo7EgBqSPNWI5vWcqdGToCPgHB/2ReWb/74oG978TG488BkauxC34zRGRs/LxzsDct9r+PJ26A6h4O7QMRwiV7odOUso3YHfBfTxMQNwtRZogPwekRq4BzGE2gKdLwjAdY6Y5/177hcvf/RPjXb18Xbfe9L/4v3C37QcsLczoIKcBrhpdq1tGovglU8V7G3TmjW2PegpAGjQgC3YwrBKW8ricm7E5DSnc//u++XjHQEG/GTktMaVHFOt4fAu6dtepa7FdScO4FPFApsKyKnxcdtUNGTnkbbbWBeCSWP/hS4lsKI2RcOmBMqEBc5upHKswzzWOWKub9ZCzXKed9ZKxS/2egF7GwGyKziCnqJj0pQ4p7nYwSlX/kMvbtBjQWgZ+JTNpVrO+cTcWTPrS+X8zaUKHrE34JfH/4UXUUMxYJAgp1CufbLgWnAycggea5t8TGNefiQH/Mm4SXj+JtxUiwEcTjDKS4QB4xoLNX2dtcaZbyqR9fvSATeZIBVoW5KIQpFgkq5RTtCTuKY0KSwvd3QSx/yGkpp5m0oEydxUCfFGOAn5PLi9Rs3xdaZOzmvt65Y1LtWgNpyKJ2ngSTJq+UQRaZ3IHg0mXdv/1qRsLNvAIGOq2IK0ag3FCWtszeX1Sn95BV+NCcwABicCXDvD3groW6mmRHHLxLH/oHu1gZvXMhhEEHONM4wCQ03Ma0BMc855nRsn3deUp4AcAjBAE2u3YMcpvkXGgrd8vf+1xMdrFW4eTn7eb0M+XyyTG/yAhxCb2lysoTrP0ZqE/Pg/8HICjsDiNQH1CahPQHyziEKIw5daJtRojK830EQy4EIM+DyA6rWrXMfLKVdzRtb8cvHwziwFx6A3Sw2pXectN+G4QK0398jg+C/3wl7LAEytAZtDwPXLGXROPcXKrbhOzZEKNxdg9/GpAlCWBo223mRBR1vHIx4XjrSM/2rn/csOehqAamZYQDo1+7kibmB2PZzyuiKub/0zfg1kwPGA1TowzoqjrTcOwmvxMfnF/7j4pgY3UuevAWAPg6sGnEKtSC7ZVABIgtUCeLRlnIgcuBHg44KXguPWf6vgYw3dTBV2vG7Ws8uCgA9RE4jFn/bhl5CWG/BC3hAC9H40UXcp+J3q6wPtcv0P8b6M+c3aLu0AAAAASUVORK5CYII=" InformativeScreenshot="ee6916b6c8e581e4fcf8acb033b42a66.jpg" Reference="K5WWoLKL2EascTsF_9gWBw/osuA_iJB5E2swWAglc_tWA" Selector="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" Url="https://www.tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" Version="V3">
+                                                <uix:TargetApp.Arguments>
+                                                  <InArgument x:TypeArguments="x:String" />
+                                                </uix:TargetApp.Arguments>
+                                                <uix:TargetApp.WorkingDirectory>
+                                                  <InArgument x:TypeArguments="x:String" />
+                                                </uix:TargetApp.WorkingDirectory>
+                                              </uix:TargetApp>
+                                            </uix:NApplicationCard.TargetApp>
+                                          </uix:NApplicationCard>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.OCREngine>
+                                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                        <ActivityFunc.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                        </ActivityFunc.Argument>
+                                      </ActivityFunc>
+                                    </uix:NApplicationCard.OCREngine>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="BHfanI8qK0mu62N5dz57Fg" IconBase64="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" InformativeScreenshot="31f466f4a7e6de460a5bce5fa92202a5.jpg" Reference="K5WWoLKL2EascTsF_9gWBw/eolI_mDTtkaSJbWt0VabrA" Selector="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='現股當沖交易統計資訊 - 證券櫃檯買賣中心' /&gt;" Url="https://www.tpex.org.tw/zh-tw/mainboard/trading/day-trading/statistics/day.html" Version="V3">
+                                        <uix:TargetApp.Arguments>
+                                          <InArgument x:TypeArguments="x:String" />
+                                        </uix:TargetApp.Arguments>
+                                        <uix:TargetApp.WorkingDirectory>
+                                          <InArgument x:TypeArguments="x:String" />
+                                        </uix:TargetApp.WorkingDirectory>
+                                      </uix:TargetApp>
+                                    </uix:NApplicationCard.TargetApp>
+                                  </uix:NApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.OCREngine>
+                              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                <ActivityFunc.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                </ActivityFunc.Argument>
+                              </ActivityFunc>
+                            </uix:NApplicationCard.OCREngine>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="gcw5-KM8sESmxki605LLWA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAwASURBVGhDxZl7cFTVHcd3pqOgKAQEFeQRIIQ8N5vdBAOBsHkIkUcSOu2M01GTmb7sHx1mnOlMq22DM7X1nRgeawMhPATbUsWq02kryQaSGINI9I+q40xZwIQQKNkkqAR295x+f79zzr131wCiaM/Md76/3++cm/v5nXvusgmu6zFCfk/SmRJvzZmy/LqB0rz9Z0rzQ2dL8sIDJXlyoCRfni3NR+wLoR48U5JX11fqq+r3e5L15f+fQdDnSvPXnynOCxpQ5Y642ORKp4t9WjTnE6eLvT0Dfl/1t9oMgZ8tWVR7tsQ3iN0UCtQX5wrQuF2zwXUzfq847SdnNX/jjeBY1AJaHw0NocEYjup+AqQ6QwEQkIj7DSjHXs6VTEzuxfXeWn276zdoZwaK83t4N3kHfXonbTegZlcNkAG38uWmTnGuoPwUK5dzcuSh6/Y0BvyLqgEZtnfSq3bSAnXCGjAFBQegDWl5EYEqaFZRnLiJvqLc8MllniqN8dUGPU4Da8Cs3SQ4dgDCDaCSglCuQQEGKB17BMFyzu7hWMnE8GXQUs9XO1L9Rd7auN21YBwxAShnYIoNCM/pOK62zINGPMoBqJ1j9qV23AvvXZqDJtzX1gTAq81jvuJj164A9Y5ZkNoVjILTdQYzdQATpC0FbfQJeWGO6C/yVGu8Kw96eQA7SGAMjZsSqLWDWtYu2rvJMUPBLcilObyT7IAxnigCZVhHzCo0cg/2F6Rd/cUGbMi5iwRkdtLsmrV7JA0YJ2sXE3OtQrewgCk2kEsodhOskjNfki1OLHH3aMyxB70w1i5CTvB4QAcMNNauMpx2vYMOZ4mTzhoAVe6WJ5fYrpRtRE1s0Ljxw/NSVfIzDxdbu6mhVAMWkDPOsXaRcwD1lhfK4aaAHD36joyc6pPWiIxIMXxExo4/I6M9FTLanQf5SCL6NjlychNjLmbNUd3rVFj2eJI0tj18e9ftKNpRJY+uyjeAFpwC1MB6l5y72v+9cob+skOceR2NrGGgWLdXRLtzAUvSkN3kuXCu65jWqjzS5Yl/Cp7mqmTv3u9KH/Sz361wAiZAK9Gj5seNRxquf1LGRkY0mhqnwkK+8d5FuTU4Khuhto8uyY/7o3pWjyieyomnAeQBnEc5w6o8RrUuqikBGp5j6vFPwbunqiZ3b5XI3VMlvXvWyb9//24NqM6p8yzyWVWxGNq2RdOo8XrPRfnQjk9lfu2QXLRhmD1/gxbiyvrzWHNJr1Yj9kmAwSAZ7coBKBxxjMB1HOlyq7grG/AUuzHvXq/xqYF1PYAXBE+NPPhUOcNaL9Bigs6WJ4wWZ8vB+ic0Au14TP60WYHnaeA8irW4Tq6borV0jRmx408xlAYTka5sDZsNeI6N0GiWrmcFGZ6Oj+fFSuFBA7kvVkkPRL75oaXi5OIscWJxFgPrmPO+dSuFOTYEsrZuJA7Y91tbVs0xT6JrrCbwkkePlgOe4FiAZdnxW+SZWJNp1WQwOcnl2bO20rO7UiaqsKlCfrDcLU4UZInjBdRElmQvyBTn33hV3RjjJ9vPAzTskIL1xtXCdo45k/8Y15ohhg9r6EwRg6JvZTJwtCsDcQYaQExONc6hjowal2dXRV3OrgqpVMlODeTsrhBP/HyZBR26O1OGCjJl77oV+pZSvoYzTyBjSzUxtuy5145e1D8N7/XhAhuOlW55BIp1paMZitOUOhbWu3J2rg26d1ZI964K4WzCvWutoHr3PR7J8FrnnvuDvp2Uq58dlrm/CdsCUFx+OTnW/cjxFGInN2noNBJg00RMOdcinQutuUgn5emvUgMh98618jISP/h9mTi+KEOElOSFdw/zzT7Cx6IHACQCMfGVNThGLWy9C2KoWwESKMMuVNCdqULVUlFDTEIc60wNubJ3rhHuHYCFsllrVIw6xVR7vcrLDRxDA+blbf3gkswBEOvX2jWgcmfNWYfTesis+Zs5RqO9AAYka4HDLYlIh/JoZwqOUErYld1MkIAlv4xKG8plKD9dHMtLE+pOUgZaL0g3IIwMbFxtjNjAO+tbWj7XPxXvQQeDATKFIW3NF9GO+TzPOcVwV9aO1SILkPFaLbO2QyoWmVD9Dwvksbx0qwG6qYFwKvsKeeKcqcU1QKAWrNE8pc75aI5jrJnHsStr+5pwZvMqkUnAEMXsTatUzlolFgXK5fuFGfiS1ss3evXoqMx+dFBmPXqOnUDYnXGCm7VZVHPUW3AceUSGDSA0F8dlLvK5JucaOdfbk7nmyti+KqQgV0vEwgKHG1Gd9Mv1hfLzI918rz68eASkpODGVuLcF9d+eEp9TxJDXQoUcARoFO2YI6hm6pxzbU7IlbFt1X5IZhjYbfcmxPcKFsVYd+SvjXwzGjXbhmUmADIBpfzateKZIf3T8DH6n8cAOAeg8Yq0z4bPBvRsQbGVt88JujKbVtcpOA1LzZgcSt9WLtLZ7yUX99VV6ttJuf/dizLjkXMyAyAsxATFtavIrNv/7qj+aWjgnSWAnAUwApwlYogj7bNk5NAszsktUf3gzHpXWmN5jYKEtpZLEoNvNVI1JZV3n3pf31LK6q0jMh0gRgSV/sh/LVDnXPyac7h2WP8UHJ+BfRpuJivaPhON3AXNBDhyrt2l4natQzMq8WXOn8RwjeUybetKbgJNIS4X7E5RDWtKX6qWIxc/5Rv3DsZk2VNhmQZoAk/7lXI7PmfVaI2plT0dlr36H7CR0U+x+wWAu0uBHpqh4xki6nCqRQ7NUHn7DCGDd6pf8tMaVwYhDUq+EvDwP5qarlOua4+/FeCb06AmHsRuEtwXpBtw6gGspWvMGPr4MQ1NcNMBOx3xdByR6VYebWennOuxg9PtX/AXNq5cvxBgtlYIR5xQh15QtY1HdmsENV45MipLnhyUqYBcCBk3eqBxSL7iOPM0Xn6/SQ4G6dgosMjBOy1FD90JaDu36kr234mS6/xJAAunAo7EgBqSPNWI5vWcqdGToCPgHB/2ReWb/74oG978TG488BkauxC34zRGRs/LxzsDct9r+PJ26A6h4O7QMRwiV7odOUso3YHfBfTxMQNwtRZogPwekRq4BzGE2gKdLwjAdY6Y5/177hcvf/RPjXb18Xbfe9L/4v3C37QcsLczoIKcBrhpdq1tGovglU8V7G3TmjW2PegpAGjQgC3YwrBKW8ricm7E5DSnc//u++XjHQEG/GTktMaVHFOt4fAu6dtepa7FdScO4FPFApsKyKnxcdtUNGTnkbbbWBeCSWP/hS4lsKI2RcOmBMqEBc5upHKswzzWOWKub9ZCzXKed9ZKxS/2egF7GwGyKziCnqJj0pQ4p7nYwSlX/kMvbtBjQWgZ+JTNpVrO+cTcWTPrS+X8zaUKHrE34JfH/4UXUUMxYJAgp1CufbLgWnAycggea5t8TGNefiQH/Mm4SXj+JtxUiwEcTjDKS4QB4xoLNX2dtcaZbyqR9fvSATeZIBVoW5KIQpFgkq5RTtCTuKY0KSwvd3QSx/yGkpp5m0oEydxUCfFGOAn5PLi9Rs3xdaZOzmvt65Y1LtWgNpyKJ2ngSTJq+UQRaZ3IHg0mXdv/1qRsLNvAIGOq2IK0ag3FCWtszeX1Sn95BV+NCcwABicCXDvD3groW6mmRHHLxLH/oHu1gZvXMhhEEHONM4wCQ03Ma0BMc855nRsn3deUp4AcAjBAE2u3YMcpvkXGgrd8vf+1xMdrFW4eTn7eb0M+XyyTG/yAhxCb2lysoTrP0ZqE/Pg/8HICjsDiNQH1CahPQHyziEKIw5daJtRojK830EQy4EIM+DyA6rWrXMfLKVdzRtb8cvHwziwFx6A3Sw2pXectN+G4QK0398jg+C/3wl7LAEytAZtDwPXLGXROPcXKrbhOzZEKNxdg9/GpAlCWBo223mRBR1vHIx4XjrSM/2rn/csOehqAamZYQDo1+7kibmB2PZzyuiKub/0zfg1kwPGA1TowzoqjrTcOwmvxMfnF/7j4pgY3UuevAWAPg6sGnEKtSC7ZVABIgtUCeLRlnIgcuBHg44KXguPWf6vgYw3dTBV2vG7Ws8uCgA9RE4jFn/bhl5CWG/BC3hAC9H40UXcp+J3q6wPtcv0P8b6M+c3aLu0AAAAASUVORK5CYII=" InformativeScreenshot="8fcbedbddcd3985931ee3bb4a9f01661.jpg" Reference="K5WWoLKL2EascTsF_9gWBw/tQk-w2lIu0yVxNGVzoW4OA" Selector="&lt;html app='chrome.exe' htmlwindowname='0.6796584280865426' title='日成交量值、指數 - 證券櫃檯買賣中心' /&gt;" Url="https://www.tpex.org.tw/zh-tw/mainboard/trading/info/daily-indices.html" Version="V3">
+                                <uix:TargetApp.Arguments>
+                                  <InArgument x:TypeArguments="x:String" />
+                                </uix:TargetApp.Arguments>
+                                <uix:TargetApp.WorkingDirectory>
+                                  <InArgument x:TypeArguments="x:String" />
+                                </uix:TargetApp.WorkingDirectory>
+                              </uix:TargetApp>
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="610,89.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </Sequence>
+</Activity>
